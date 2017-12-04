@@ -98,6 +98,9 @@ def file_converter()
       # convert the png to jpeg with 20% compression
       # convert -verbose -density 150 BANK_STATEMENT-150-tmp-*.png -quality 80 BANK_STATEMENT-150-80-tmp-%02d.jpg
 
+      # convert directly to pnggray from ghost script
+      # gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=jpeggray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150  -sCompression=lzw  -dFitPage -dBackgroundColor=16#ffffff -dJPEGQ=50 -sOutputFile=APPLICATION_PDF-r120-30-jgray-clzw-%02d.jpg APPLICATION_PDF.pdf
+
       #%x is used to run from shell
       %x(#{convertCmdJPG})
 

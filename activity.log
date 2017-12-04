@@ -781,3 +781,32 @@ AADHAAR-r150-pgray-clzw-a4.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256
 AADHAAR-r150-pgray-clzw-a4.png=>AADHAAR-conv-a4-pngto.jpg PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 49.2KB 0.060u 0:00.020
 indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ 
 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=jpeggray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r120  -sCompression=lzw  -dFitPage -dBackgroundColor=16#ffffff -dJPEGQ=30 -sOutputFile=AADHAAR-r120-30-jgray-clzw.jpg AADHAAR.PDF 
+Error: /undefinedfilename in (AADHAAR.PDF)
+Operand stack:
+
+Execution stack:
+   %interp_exit   .runexec2   --nostringval--   --nostringval--   --nostringval--   2   %stopped_push   --nostringval--   --nostringval--   --nostringval--   false   1   %stopped_push
+Dictionary stack:
+   --dict:1185/1684(ro)(G)--   --dict:0/20(G)--   --dict:77/200(L)--
+Current allocation mode is local
+Last OS error: No such file or directory
+GPL Ghostscript 9.10: Unrecoverable error, exit code 1
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ cd test/pdf1
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=jpeggray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r120  -sCompression=lzw  -dFitPage -dBackgroundColor=16#ffffff -dJPEGQ=30 -sOutputFile=AADHAAR-r120-30-jgray-clzw.jpg AADHAAR.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=jpeggray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r120  -sCompression=lzw  -dFitPage -dBackgroundColor=16#ffffff -dJPEGQ=30 -sOutputFile=AADHAAR-r120-30-jgray-clzw-%02d.jpg APPLICATION_PDF.PDF 
+Error: /undefinedfilename in (APPLICATION_PDF.PDF)
+Operand stack:
+
+Execution stack:
+   %interp_exit   .runexec2   --nostringval--   --nostringval--   --nostringval--   2   %stopped_push   --nostringval--   --nostringval--   --nostringval--   false   1   %stopped_push
+Dictionary stack:
+   --dict:1185/1684(ro)(G)--   --dict:0/20(G)--   --dict:77/200(L)--
+Current allocation mode is local
+Last OS error: No such file or directory
+GPL Ghostscript 9.10: Unrecoverable error, exit code 1
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=jpeggray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r120  -sCompression=lzw  -dFitPage -dBackgroundColor=16#ffffff -dJPEGQ=30 -sOutputFile=AADHAAR-r120-30-jgray-clzw-%02d.jpg APPLICATION_PDF.pdf
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=jpeggray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150  -sCompression=lzw  -dFitPage -dBackgroundColor=16#ffffff -dJPEGQ=50 -sOutputFile=APPLICATION_PDF-r120-30-jgray-clzw-%02d.jpg APPLICATION_PDF.pdf
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$
+
+
