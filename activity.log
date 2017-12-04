@@ -1,0 +1,783 @@
+
+
+indranilm@BBLPT0828:~/github/indranil32$ cd rmagic-samples/
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ ls
+total 32
+-rw-rw-r--  1 indranilm indranilm 2889 Dec  1 16:58 imageprops.rb
+drwxrwxr-x  4 indranilm indranilm 4096 Dec  4 10:26 test
+-rw-rw-r--  1 indranilm indranilm  511 Dec  4 10:30 rmagic-samples.iml
+-rw-rw-r--  1 indranilm indranilm 6391 Dec  4 14:12 main1.rb
+drwxrwxr-x  4 indranilm indranilm 4096 Dec  4 14:13 .
+drwxrwxr-x  4 indranilm indranilm 4096 Dec  4 14:13 .idea
+drwxrwxr-x 10 indranilm indranilm 4096 Dec  4 14:58 ..
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ grep -c -i "/image" test/pdf1/
+AADHAAR_converted.jpg                        ApplicationSummaryReport_1039683752.PDF      BANK_STATEMENT_converted-8.jpg
+AADHAAR.PDF                                  BANK_STATEMENT_converted-0.jpg               BANK_STATEMENT_converted-9.jpg
+APPLICATION_PDF-0.jpg                        BANK_STATEMENT_converted-10.jpg              BANK_STATEMENT.PDF
+APPLICATION_PDF-1.jpg                        BANK_STATEMENT_converted-1.jpg               EMPLOYMENT_VERIFICATION_1099535562.pdf
+APPLICATION_PDF-2.jpg                        BANK_STATEMENT_converted-2.jpg               GAS_BILL_converted.jpg
+APPLICATION_PDF-3.jpg                        BANK_STATEMENT_converted-3.jpg               GAS_BILL.PDF
+APPLICATION_PDF-4.jpg                        BANK_STATEMENT_converted-4.jpg               PAYSLIP_converted-0.jpg
+APPLICATION_PDF-gs.tiff                      BANK_STATEMENT_converted-5.jpg               PAYSLIP_converted-1.jpg
+APPLICATION_PDF.pdf                          BANK_STATEMENT_converted-6.jpg               PAYSLIP.PDF
+ApplicationSummaryReport_1039683752-gs.tiff  BANK_STATEMENT_converted-7.jpg               
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ grep -c -i "/image" test/pdf1/AADHAAR.PDF 
+17
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ grep  -i "/image" test/pdf1/AADHAAR.PDF 
+Binary file test/pdf1/AADHAAR.PDF matches
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ grep -C -i "/image" test/pdf1/AADHAAR.PDF 
+grep: -i: invalid context length argument
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ grep -c -i "/image" test/pdf1/AADHAAR.PDF 
+17
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ grep -c -i "/image" test/pdf1/ApplicationSummaryReport_1039683752.PDF 
+1
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ grep -c -i "/image" test/pdf1/EMPLOYMENT_VERIFICATION_1099535562.pdf 
+1
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ grep -c -i "/image" test/pdf1/BANK_STATEMENT.PDF 
+22
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ grep -c -i "/image" test/pdf2/ApplicationSummaryReport_1039683752.PDF 
+1
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ grep -c -i "/image" test/pdf2/APPLICATION_PDF.pdf 
+85
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ grep -c -i "/image" test/pdf2/APPLICATION_PDF.pdf ^C
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ pwd
+/home/indranilm/github/indranil32/rmagic-samples
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ cd test/pdf1
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ ls
+total 36252
+-rw-rw-r-- 1 indranilm indranilm  5718567 Dec  1 17:19 PAYSLIP.PDF
+-rw-rw-r-- 1 indranilm indranilm  2516485 Dec  1 17:23 GAS_BILL.PDF
+-rw-rw-r-- 1 indranilm indranilm 16490033 Dec  1 17:24 BANK_STATEMENT.PDF
+-rw-rw-r-- 1 indranilm indranilm   140502 Dec  1 17:24 AADHAAR.PDF
+-rw-rw-r-- 1 indranilm indranilm     4072 Dec  1 17:25 ApplicationSummaryReport_1039683752.PDF
+drwxrwxr-x 4 indranilm indranilm     4096 Dec  4 10:26 ..
+-rw-rw-r-- 1 indranilm indranilm   715996 Dec  4 10:27 APPLICATION_PDF.pdf
+-rw-rw-r-- 1 indranilm indranilm     2498 Dec  4 10:29 EMPLOYMENT_VERIFICATION_1099535562.pdf
+-rw-rw-r-- 1 indranilm indranilm   148115 Dec  4 13:37 AADHAAR_converted.jpg
+-rw-rw-r-- 1 indranilm indranilm   479442 Dec  4 13:37 APPLICATION_PDF-gs.tiff
+-rw-rw-r-- 1 indranilm indranilm    42696 Dec  4 13:37 ApplicationSummaryReport_1039683752-gs.tiff
+-rw-rw-r-- 1 indranilm indranilm   347777 Dec  4 13:38 BANK_STATEMENT_converted-0.jpg
+-rw-rw-r-- 1 indranilm indranilm   232043 Dec  4 13:38 BANK_STATEMENT_converted-1.jpg
+-rw-rw-r-- 1 indranilm indranilm   178505 Dec  4 13:38 BANK_STATEMENT_converted-2.jpg
+-rw-rw-r-- 1 indranilm indranilm   289446 Dec  4 13:38 BANK_STATEMENT_converted-3.jpg
+-rw-rw-r-- 1 indranilm indranilm   427246 Dec  4 13:38 BANK_STATEMENT_converted-4.jpg
+-rw-rw-r-- 1 indranilm indranilm   249960 Dec  4 13:38 BANK_STATEMENT_converted-5.jpg
+-rw-rw-r-- 1 indranilm indranilm   337589 Dec  4 13:38 BANK_STATEMENT_converted-6.jpg
+-rw-rw-r-- 1 indranilm indranilm   324947 Dec  4 13:38 BANK_STATEMENT_converted-7.jpg
+-rw-rw-r-- 1 indranilm indranilm   200906 Dec  4 13:38 BANK_STATEMENT_converted-8.jpg
+-rw-rw-r-- 1 indranilm indranilm   308722 Dec  4 13:38 BANK_STATEMENT_converted-9.jpg
+-rw-rw-r-- 1 indranilm indranilm   254457 Dec  4 13:38 BANK_STATEMENT_converted-10.jpg
+-rw-rw-r-- 1 indranilm indranilm   435347 Dec  4 13:38 GAS_BILL_converted.jpg
+-rw-rw-r-- 1 indranilm indranilm  3004403 Dec  4 13:38 PAYSLIP_converted-0.jpg
+-rw-rw-r-- 1 indranilm indranilm  3004403 Dec  4 13:38 PAYSLIP_converted-1.jpg
+-rw-rw-r-- 1 indranilm indranilm   190571 Dec  4 13:40 APPLICATION_PDF-0.jpg
+-rw-rw-r-- 1 indranilm indranilm   224106 Dec  4 13:40 APPLICATION_PDF-1.jpg
+-rw-rw-r-- 1 indranilm indranilm   328096 Dec  4 13:40 APPLICATION_PDF-2.jpg
+-rw-rw-r-- 1 indranilm indranilm   327143 Dec  4 13:40 APPLICATION_PDF-3.jpg
+drwxrwxr-x 2 indranilm indranilm     4096 Dec  4 13:40 .
+-rw-rw-r-- 1 indranilm indranilm    98135 Dec  4 13:40 APPLICATION_PDF-4.jpg
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ vim ../../main1.rb 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ convert -verbose -strip -density  150  AADHAAR.PDF  -quality 30 -colorspace Gray AADHAAR_manual.jpg
+"gs" -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 "-sDEVICE=pngalpha" -dTextAlphaBits=4 -dGraphicsAlphaBits=4 "-r150x150"  "-sOutputFile=/tmp/magick-XXyq2PDQ-%08d" "-f/tmp/magick-FKHgl8pm" "-f/tmp/magick-EX6DixcS"
+/tmp/magick-XXyq2PDQ-00000001 PNG 1240x1754 1240x1754+0+0 8-bit DirectClass 413KB 0.040u 0:00.050
+AADHAAR.PDF PDF 1240x1754 1240x1754+0+0 16-bit DirectClass 413KB 0.000u 0:00.000
+AADHAAR.PDF=>AADHAAR_manual.jpg PDF 1240x1754 1240x1754+0+0 16-bit Grayscale DirectClass 147KB 0.520u 0:00.230
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pngalpha -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150  -sOutputFile=AADHAAR_manual.png
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pngalpha -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150 AADHAAR.PDF  -sOutputFile=AADHAAR_manual.png
+GPL Ghostscript 9.10: **** Could not open the file  .
+Error: /invalidfileaccess in --showpage--
+Operand stack:
+   1   true
+Execution stack:
+   %interp_exit   .runexec2   --nostringval--   --nostringval--   --nostringval--   2   %stopped_push   --nostringval--   --nostringval--   --nostringval--   false   1   %stopped_push   1916   1   3   %oparray_pop   1915   1   3   %oparray_pop   1899   1   3   %oparray_pop   --nostringval--   --nostringval--   2   1   1   --nostringval--   %for_pos_int_continue   --nostringval--   --nostringval--   1793   0   9   %oparray_pop   --nostringval--   --nostringval--
+Dictionary stack:
+   --dict:1177/1684(ro)(G)--   --dict:1/20(G)--   --dict:82/200(L)--   --dict:82/200(L)--   --dict:113/127(ro)(G)--   --dict:292/300(ro)(G)--   --dict:28/32(L)--   --dict:6/8(L)--   --dict:21/40(L)--
+Current allocation mode is local
+GPL Ghostscript 9.10: Unrecoverable error, exit code 1
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pngalpha -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150 AADHAAR  -sOutputFile=AADHAAR_manual.png
+AADHAAR_converted.jpg  AADHAAR_manual.jpg     AADHAAR.PDF            
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pngalpha -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150 AADHAAR  -sOutputFile=AADHAAR_manual.png
+AADHAAR_converted.jpg  AADHAAR_manual.jpg     AADHAAR.PDF            
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pngalpha -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150 AADHAAR.PDF  -sOutputFile=AADHAAR_manual.png
+GPL Ghostscript 9.10: **** Could not open the file  .
+Error: /invalidfileaccess in --showpage--
+Operand stack:
+   1   true
+Execution stack:
+   %interp_exit   .runexec2   --nostringval--   --nostringval--   --nostringval--   2   %stopped_push   --nostringval--   --nostringval--   --nostringval--   false   1   %stopped_push   1916   1   3   %oparray_pop   1915   1   3   %oparray_pop   1899   1   3   %oparray_pop   --nostringval--   --nostringval--   2   1   1   --nostringval--   %for_pos_int_continue   --nostringval--   --nostringval--   1793   0   9   %oparray_pop   --nostringval--   --nostringval--
+Dictionary stack:
+   --dict:1177/1684(ro)(G)--   --dict:1/20(G)--   --dict:82/200(L)--   --dict:82/200(L)--   --dict:113/127(ro)(G)--   --dict:292/300(ro)(G)--   --dict:28/32(L)--   --dict:6/8(L)--   --dict:21/40(L)--
+Current allocation mode is local
+GPL Ghostscript 9.10: Unrecoverable error, exit code 1
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pngalpha -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150 AADHAAR.PDF  -sOutputFile=AADHAAR_manual.png
+GPL Ghostscript 9.10: **** Could not open the file  .
+Error: /invalidfileaccess in --showpage--
+Operand stack:
+   1   true
+Execution stack:
+   %interp_exit   .runexec2   --nostringval--   --nostringval--   --nostringval--   2   %stopped_push   --nostringval--   --nostringval--   --nostringval--   false   1   %stopped_push   1916   1   3   %oparray_pop   1915   1   3   %oparray_pop   1899   1   3   %oparray_pop   --nostringval--   --nostringval--   2   1   1   --nostringval--   %for_pos_int_continue   --nostringval--   --nostringval--   1793   0   9   %oparray_pop   --nostringval--   --nostringval--
+Dictionary stack:
+   --dict:1177/1684(ro)(G)--   --dict:1/20(G)--   --dict:82/200(L)--   --dict:82/200(L)--   --dict:113/127(ro)(G)--   --dict:292/300(ro)(G)--   --dict:28/32(L)--   --dict:6/8(L)--   --dict:21/40(L)--
+Current allocation mode is local
+GPL Ghostscript 9.10: Unrecoverable error, exit code 1
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pngalpha -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150  AADHAAR.PDF  -sOutputFile=AADHAAR_manual
+GPL Ghostscript 9.10: **** Could not open the file  .
+Error: /invalidfileaccess in --showpage--
+Operand stack:
+   1   true
+Execution stack:
+   %interp_exit   .runexec2   --nostringval--   --nostringval--   --nostringval--   2   %stopped_push   --nostringval--   --nostringval--   --nostringval--   false   1   %stopped_push   1916   1   3   %oparray_pop   1915   1   3   %oparray_pop   1899   1   3   %oparray_pop   --nostringval--   --nostringval--   2   1   1   --nostringval--   %for_pos_int_continue   --nostringval--   --nostringval--   1793   0   9   %oparray_pop   --nostringval--   --nostringval--
+Dictionary stack:
+   --dict:1177/1684(ro)(G)--   --dict:1/20(G)--   --dict:82/200(L)--   --dict:82/200(L)--   --dict:113/127(ro)(G)--   --dict:292/300(ro)(G)--   --dict:28/32(L)--   --dict:6/8(L)--   --dict:21/40(L)--
+Current allocation mode is local
+GPL Ghostscript 9.10: Unrecoverable error, exit code 1
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pngalpha -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150   -sOutputFile=AADHAAR_manual.png AADHAAR.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pngalpha -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150   -sOutputFile=AADHAAR_manual1.jpg AADHAAR.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pngalpha -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150   -sOutputFile=AADHAAR_manual1.png ^CADHAAR.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ vim ../../main1.rb 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pngalpha -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150 -sCompression=lzw  -sOutputFile=AADHAAR_manual1.png AADHAAR.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pngalpha -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150 -sCompression=lzw -sBackground=white -sOutputFile=AADHAAR_manual2.png AADHAAR.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pngalpha -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150 -sCompression=lzw -dBackground=white -sOutputFile=AADHAAR_manual2.png AADHAAR.PDF 
+Invalid value for option -dBackground=white, use -sNAME= to define string constants
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pngalpha -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150 -sCompression=lzw -dbackground=white -sOutputFile=AADHAAR_manual2.png AADHAAR.PDF 
+Invalid value for option -dbackground=white, use -sNAME= to define string constants
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pngalpha -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150 -sCompression=lzw -sbackground=white -sOutputFile=AADHAAR_manual2.png AADHAAR.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -h  | help
+GNU bash, version 4.3.11(1)-release (x86_64-pc-linux-gnu)
+These shell commands are defined internally.  Type `help' to see this list.
+Type `help name' to find out more about the function `name'.
+Use `info bash' to find out more about the shell in general.
+Use `man -k' or `info' to find out more about commands not in this list.
+
+A star (*) next to a name means that the command is disabled.
+
+ job_spec [&]                                                            history [-c] [-d offset] [n] or history -anrw [filename] or history >
+ (( expression ))                                                        if COMMANDS; then COMMANDS; [ elif COMMANDS; then COMMANDS; ]... [ e>
+ . filename [arguments]                                                  jobs [-lnprs] [jobspec ...] or jobs -x command [args]
+ :                                                                       kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill ->
+ [ arg... ]                                                              let arg [arg ...]
+ [[ expression ]]                                                        local [option] name[=value] ...
+ alias [-p] [name[=value] ... ]                                          logout [n]
+ bg [job_spec ...]                                                       mapfile [-n count] [-O origin] [-s count] [-t] [-u fd] [-C callback]>
+ bind [-lpsvPSVX] [-m keymap] [-f filename] [-q name] [-u name] [-r ke>  popd [-n] [+N | -N]
+ break [n]                                                               printf [-v var] format [arguments]
+ builtin [shell-builtin [arg ...]]                                       pushd [-n] [+N | -N | dir]
+ caller [expr]                                                           pwd [-LP]
+ case WORD in [PATTERN [| PATTERN]...) COMMANDS ;;]... esac              read [-ers] [-a array] [-d delim] [-i text] [-n nchars] [-N nchars] >
+ cd [-L|[-P [-e]] [-@]] [dir]                                            readarray [-n count] [-O origin] [-s count] [-t] [-u fd] [-C callbac>
+ command [-pVv] command [arg ...]                                        readonly [-aAf] [name[=value] ...] or readonly -p
+ compgen [-abcdefgjksuv] [-o option]  [-A action] [-G globpat] [-W wor>  return [n]
+ complete [-abcdefgjksuv] [-pr] [-DE] [-o option] [-A action] [-G glob>  select NAME [in WORDS ... ;] do COMMANDS; done
+ compopt [-o|+o option] [-DE] [name ...]                                 set [-abefhkmnptuvxBCHP] [-o option-name] [--] [arg ...]
+ continue [n]                                                            shift [n]
+ coproc [NAME] command [redirections]                                    shopt [-pqsu] [-o] [optname ...]
+ declare [-aAfFgilnrtux] [-p] [name[=value] ...]                         source filename [arguments]
+ dirs [-clpv] [+N] [-N]                                                  suspend [-f]
+ disown [-h] [-ar] [jobspec ...]                                         test [expr]
+ echo [-neE] [arg ...]                                                   time [-p] pipeline
+ enable [-a] [-dnps] [-f filename] [name ...]                            times
+ eval [arg ...]                                                          trap [-lp] [[arg] signal_spec ...]
+ exec [-cl] [-a name] [command [arguments ...]] [redirection ...]        true
+ exit [n]                                                                type [-afptP] name [name ...]
+ export [-fn] [name[=value] ...] or export -p                            typeset [-aAfFgilrtux] [-p] name[=value] ...
+ false                                                                   ulimit [-SHabcdefilmnpqrstuvxT] [limit]
+ fc [-e ename] [-lnr] [first] [last] or fc -s [pat=rep] [command]        umask [-p] [-S] [mode]
+ fg [job_spec]                                                           unalias [-a] name [name ...]
+ for NAME [in WORDS ... ] ; do COMMANDS; done                            unset [-f] [-v] [-n] [name ...]
+ for (( exp1; exp2; exp3 )); do COMMANDS; done                           until COMMANDS; do COMMANDS; done
+ function name { COMMANDS ; } or name () { COMMANDS ; }                  variables - Names and meanings of some shell variables
+ getopts optstring name [arg]                                            wait [-n] [id ...]
+ hash [-lr] [-p pathname] [-dt] [name ...]                               while COMMANDS; do COMMANDS; done
+ help [-dms] [pattern ...]                                               { COMMANDS ; }
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -h  | less
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -h  
+GPL Ghostscript 9.10 (2013-08-30)
+Copyright (C) 2013 Artifex Software, Inc.  All rights reserved.
+Usage: gs [switches] [file1.ps file2.ps ...]
+Most frequently used switches: (you can use # in place of =)
+ -dNOPAUSE           no pause after page   | -q       `quiet', fewer messages
+ -g<width>x<height>  page size in pixels   | -r<res>  pixels/inch resolution
+ -sDEVICE=<devname>  select device         | -dBATCH  exit after last file
+ -sOutputFile=<file> select output file: - for stdout, |command for pipe,
+                                         embed %d or %ld for page #
+Input formats: PostScript PostScriptLevel1 PostScriptLevel2 PostScriptLevel3 PDF
+Default output device: x11alpha
+Available devices:
+   alc1900 alc2000 alc4000 alc4100 alc8500 alc8600 alc9100 ap3250 appledmp
+   atx23 atx24 atx38 bbox bit bitcmyk bitrgb bitrgbtags bj10e bj10v bj10vh
+   bj200 bjc600 bjc800 bjc880j bjccmyk bjccolor bjcgray bjcmono bmp16 bmp16m
+   bmp256 bmp32b bmpgray bmpmono bmpsep1 bmpsep8 ccr cdeskjet cdj1600 cdj500
+   cdj550 cdj670 cdj850 cdj880 cdj890 cdj970 cdjcolor cdjmono cdnj500 cfax
+   chp2200 cif cljet5 cljet5c cljet5pr coslw2p coslwxl cp50 cups declj250
+   deskjet devicen dfaxhigh dfaxlow display dj505j djet500 djet500c dl2100
+   dnj650c epl2050 epl2050p epl2120 epl2500 epl2750 epl5800 epl5900 epl6100
+   epl6200 eplcolor eplmono eps9high eps9mid epson epsonc epswrite escp
+   escpage faxg3 faxg32d faxg4 fmlbp fmpr fs600 gdi hl1240 hl1250 hl7x0
+   hpdj1120c hpdj310 hpdj320 hpdj340 hpdj400 hpdj500 hpdj500c hpdj510
+   hpdj520 hpdj540 hpdj550c hpdj560c hpdj600 hpdj660c hpdj670c hpdj680c
+   hpdj690c hpdj850c hpdj855c hpdj870c hpdj890c hpdjplus hpdjportable ibmpro
+   ijs imagen inferno inkcov iwhi iwlo iwlq jetp3852 jj100 jpeg jpegcmyk
+   jpeggray la50 la70 la75 la75plus laserjet lbp310 lbp320 lbp8 lex2050
+   lex3200 lex5700 lex7000 lips2p lips3 lips4 lips4v lj250 lj3100sw lj4dith
+   lj4dithp lj5gray lj5mono ljet2p ljet3 ljet3d ljet4 ljet4d ljet4pjl
+   ljetplus ln03 lp1800 lp1900 lp2000 lp2200 lp2400 lp2500 lp2563 lp3000c
+   lp7500 lp7700 lp7900 lp8000 lp8000c lp8100 lp8200c lp8300c lp8300f
+   lp8400f lp8500c lp8600 lp8600f lp8700 lp8800c lp8900 lp9000b lp9000c
+   lp9100 lp9200b lp9200c lp9300 lp9400 lp9500c lp9600 lp9600s lp9800c
+   lps4500 lps6500 lq850 lxm3200 lxm5700m m8510 mag16 mag256 md1xMono md2k
+   md50Eco md50Mono md5k mgr4 mgr8 mgrgray2 mgrgray4 mgrgray8 mgrmono miff24
+   mj500c mj6000c mj700v2c mj8000c ml600 necp6 npdl nullpage oce9050 oki182
+   oki4w okiibm oprp opvp paintjet pam pamcmyk32 pamcmyk4 pbm pbmraw pcl3
+   pcx16 pcx24b pcx256 pcx256 pcx2up pcxcmyk pcxgray pcxmono pdfwrite
+   pdfwrite pgm pgmraw pgnm pgnmraw photoex picty180 pj pjetxl pjxl pjxl300
+   pkm pkmraw pksm pksmraw plan plan9bm planc plang plank planm png16 png16m
+   png256 png48 pngalpha pnggray pngmono pnm pnmraw ppm ppmraw pr1000
+   pr1000_4 pr150 pr201 ps2write psdcmyk psdrgb pwgraster pxlcolor pxlmono
+   r4081 rinkj rpdl samsunggdi sgirgb sj48 spotcmyk st800 stcolor sunhmono
+   svg t4693d2 t4693d4 t4693d8 tek4696 tiff12nc tiff24nc tiff32nc tiff48nc
+   tiff64nc tiffcrle tiffg3 tiffg32d tiffg4 tiffgray tifflzw tiffpack
+   tiffscaled tiffsep tiffsep1 txtwrite uniprint x11 x11alpha x11cmyk
+   x11cmyk2 x11cmyk4 x11cmyk8 x11gray2 x11gray4 x11mono xcf xes xpswrite
+Search path:
+   /usr/share/ghostscript/9.10/Resource/Init :
+   /usr/share/ghostscript/9.10/lib :
+   /usr/share/ghostscript/9.10/Resource/Font :
+   /usr/share/ghostscript/fonts : /var/lib/ghostscript/fonts :
+   /usr/share/cups/fonts : /usr/share/ghostscript/fonts :
+   /usr/local/lib/ghostscript/fonts : /usr/share/fonts
+Ghostscript is also using fontconfig to search for font files
+For more information, see /usr/share/doc/ghostscript/Use.htm.
+Please report bugs to bugs.ghostscript.com.
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pngalpha -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150 -sCompression=lzw -dBackgroundColor=16#ffffff -sOutputFile=AADHAAR_manual3.png AADHAAR.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffgray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150 -sCompression=lzw -dBackgroundColor=16#ffffff -sOutputFile=AADHAAR_manual3.tiff AADHAAR.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffgray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r120 -sCompression=lzw -dBackgroundColor=16#ffffff -sOutputFile=AADHAAR_manual4.tiff AADHAAR.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffgray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r120 -sCompression=lzw -dBackgroundColor=16#ffffff -sOutputFile=AADHAAR_manual4.tiff AADHAAR.PDF ^C
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ vim ../../main1.rb 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffg4 -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r120 -sCompression=lzw -dBackgroundColor=16#ffffff -sOutputFile=AADHAAR_manual5.tiff AADHAAR.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ vim ../../main1.rb 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -h
+GPL Ghostscript 9.10 (2013-08-30)
+Copyright (C) 2013 Artifex Software, Inc.  All rights reserved.
+Usage: gs [switches] [file1.ps file2.ps ...]
+Most frequently used switches: (you can use # in place of =)
+ -dNOPAUSE           no pause after page   | -q       `quiet', fewer messages
+ -g<width>x<height>  page size in pixels   | -r<res>  pixels/inch resolution
+ -sDEVICE=<devname>  select device         | -dBATCH  exit after last file
+ -sOutputFile=<file> select output file: - for stdout, |command for pipe,
+                                         embed %d or %ld for page #
+Input formats: PostScript PostScriptLevel1 PostScriptLevel2 PostScriptLevel3 PDF
+Default output device: x11alpha
+Available devices:
+   alc1900 alc2000 alc4000 alc4100 alc8500 alc8600 alc9100 ap3250 appledmp
+   atx23 atx24 atx38 bbox bit bitcmyk bitrgb bitrgbtags bj10e bj10v bj10vh
+   bj200 bjc600 bjc800 bjc880j bjccmyk bjccolor bjcgray bjcmono bmp16 bmp16m
+   bmp256 bmp32b bmpgray bmpmono bmpsep1 bmpsep8 ccr cdeskjet cdj1600 cdj500
+   cdj550 cdj670 cdj850 cdj880 cdj890 cdj970 cdjcolor cdjmono cdnj500 cfax
+   chp2200 cif cljet5 cljet5c cljet5pr coslw2p coslwxl cp50 cups declj250
+   deskjet devicen dfaxhigh dfaxlow display dj505j djet500 djet500c dl2100
+   dnj650c epl2050 epl2050p epl2120 epl2500 epl2750 epl5800 epl5900 epl6100
+   epl6200 eplcolor eplmono eps9high eps9mid epson epsonc epswrite escp
+   escpage faxg3 faxg32d faxg4 fmlbp fmpr fs600 gdi hl1240 hl1250 hl7x0
+   hpdj1120c hpdj310 hpdj320 hpdj340 hpdj400 hpdj500 hpdj500c hpdj510
+   hpdj520 hpdj540 hpdj550c hpdj560c hpdj600 hpdj660c hpdj670c hpdj680c
+   hpdj690c hpdj850c hpdj855c hpdj870c hpdj890c hpdjplus hpdjportable ibmpro
+   ijs imagen inferno inkcov iwhi iwlo iwlq jetp3852 jj100 jpeg jpegcmyk
+   jpeggray la50 la70 la75 la75plus laserjet lbp310 lbp320 lbp8 lex2050
+   lex3200 lex5700 lex7000 lips2p lips3 lips4 lips4v lj250 lj3100sw lj4dith
+   lj4dithp lj5gray lj5mono ljet2p ljet3 ljet3d ljet4 ljet4d ljet4pjl
+   ljetplus ln03 lp1800 lp1900 lp2000 lp2200 lp2400 lp2500 lp2563 lp3000c
+   lp7500 lp7700 lp7900 lp8000 lp8000c lp8100 lp8200c lp8300c lp8300f
+   lp8400f lp8500c lp8600 lp8600f lp8700 lp8800c lp8900 lp9000b lp9000c
+   lp9100 lp9200b lp9200c lp9300 lp9400 lp9500c lp9600 lp9600s lp9800c
+   lps4500 lps6500 lq850 lxm3200 lxm5700m m8510 mag16 mag256 md1xMono md2k
+   md50Eco md50Mono md5k mgr4 mgr8 mgrgray2 mgrgray4 mgrgray8 mgrmono miff24
+   mj500c mj6000c mj700v2c mj8000c ml600 necp6 npdl nullpage oce9050 oki182
+   oki4w okiibm oprp opvp paintjet pam pamcmyk32 pamcmyk4 pbm pbmraw pcl3
+   pcx16 pcx24b pcx256 pcx256 pcx2up pcxcmyk pcxgray pcxmono pdfwrite
+   pdfwrite pgm pgmraw pgnm pgnmraw photoex picty180 pj pjetxl pjxl pjxl300
+   pkm pkmraw pksm pksmraw plan plan9bm planc plang plank planm png16 png16m
+   png256 png48 pngalpha pnggray pngmono pnm pnmraw ppm ppmraw pr1000
+   pr1000_4 pr150 pr201 ps2write psdcmyk psdrgb pwgraster pxlcolor pxlmono
+   r4081 rinkj rpdl samsunggdi sgirgb sj48 spotcmyk st800 stcolor sunhmono
+   svg t4693d2 t4693d4 t4693d8 tek4696 tiff12nc tiff24nc tiff32nc tiff48nc
+   tiff64nc tiffcrle tiffg3 tiffg32d tiffg4 tiffgray tifflzw tiffpack
+   tiffscaled tiffsep tiffsep1 txtwrite uniprint x11 x11alpha x11cmyk
+   x11cmyk2 x11cmyk4 x11cmyk8 x11gray2 x11gray4 x11mono xcf xes xpswrite
+Search path:
+   /usr/share/ghostscript/9.10/Resource/Init :
+   /usr/share/ghostscript/9.10/lib :
+   /usr/share/ghostscript/9.10/Resource/Font :
+   /usr/share/ghostscript/fonts : /var/lib/ghostscript/fonts :
+   /usr/share/cups/fonts : /usr/share/ghostscript/fonts :
+   /usr/local/lib/ghostscript/fonts : /usr/share/fonts
+Ghostscript is also using fontconfig to search for font files
+For more information, see /usr/share/doc/ghostscript/Use.htm.
+Please report bugs to bugs.ghostscript.com.
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tifflzw -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r120 -sCompression=lzw -dBackgroundColor=16#ffffff -sOutputFile=AADHAAR_manual6.tiff AADHAAR.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffg4 -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150 -sCompression=lzw -dBackgroundColor=16#ffffff -sOutputFile=AADHAAR_manual_r150_tg4.tiff AADHAAR.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffgray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150 -sCompression=lzw -dBackgroundColor=16#ffffff -sOutputFile=APPLICATION_PDF-r150-tgray-clzw-%02d.tiff APPLICATION_PDF.pdf 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffgray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150  -dBackgroundColor=16#ffffff -sOutputFile=APPLICATION_PDF-r150-tgray-%02d.tiff APPLICATION_PDF.pdf 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffgray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r120 -sCompression=lzw -dBackgroundColor=16#ffffff -sOutputFile=APPLICATION_PDF-r120-tgray-clzw-%02d.tiff APPLICATION_PDF.pdf 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffg4 -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r120 -sCompression=lzw -dBackgroundColor=16#ffffff -sOutputFile=APPLICATION_PDF-r120-tg4-clzw-%02d.tiff APPLICATION_PDF.pdf 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffg4 -dTextAlphaBits=8 -dGraphicsAlphaBits=4 -r120 -sCompression=lzw -dBackgroundColor=16#ffffff -sOutputFile=APPLICATION_PDF-r120-tg4-clzw-2-%02d.tiff APPLICATION_PDF.pdf 
+Unrecoverable error: rangecheck in .putdeviceprops
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffg4 -dTextAlphaBits=8 -dGraphicsAlphaBits=8 -r120 -sCompression=lzw -dBackgroundColor=16#ffffff -sOutputFile=APPLICATION_PDF-r120-tg4-clzw-2-%02d.tiff APPLICATION_PDF.pdf 
+Unrecoverable error: rangecheck in .putdeviceprops
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffgray -dTextAlphaBits=8 -dGraphicsAlphaBits=4 -r120 -sCompression=lzw -dBackgroundColor=16#ffffff -sOutputFile=APPLICATION_PDF-r120-tg4-clzw-2-%02d.tiff APPLICATION_PDF.pdf 
+Unrecoverable error: rangecheck in .putdeviceprops
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffgray -dTextAlphaBits=8 -dGraphicsAlphaBits=4 -r120 -sCompression=lzw -dBackgr^CndColor=16#ffffff -sOutputFile=APPLICATION_PDF-r120-tg4-clzw-2-%02d.tiff APPLICATION_PDF.pdf 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffgray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150 -sCompression=lzw -dBackgroundColor=16#ffffff -sOutputFile=BANK_STATEMENT-r150-tgray-clzw-2-%02d.tiff BANK_STATEMENT.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffgray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150  -dBackgroundColor=16#ffffff -sOutputFile=BANK_STATEMENT-r150-tgray-2-%02d.tiff BANK_STATEMENT.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffgray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r120 -sCompression=lzw -dBackgroundColor=16#ffffff -sOutputFile=BANK_STATEMENT-r120-tgray-clzw-2-%02d.tiff BANK_STATEMENT.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ convert -verbose -strip -density  150  BANK_STATEMENT.PDF  -quality 30 -colorspace Gray BANK_STATEMENT_manual-%02d.jpg
+"gs" -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 "-sDEVICE=pngalpha" -dTextAlphaBits=4 -dGraphicsAlphaBits=4 "-r150x150"  "-sOutputFile=/tmp/magick-kPs0Swqy-%08d" "-f/tmp/magick-4VfkB4tH" "-f/tmp/magick-8BGspGxQ"
+/tmp/magick-kPs0Swqy-00000001 PNG 3833x6800 3833x6800+0+0 8-bit DirectClass 7.766MB 0.540u 0:00.539
+/tmp/magick-kPs0Swqy-00000002 PNG 3833x6800 3833x6800+0+0 8-bit DirectClass 7.114MB 0.670u 0:00.679
+/tmp/magick-kPs0Swqy-00000003 PNG 3833x6800 3833x6800+0+0 8-bit DirectClass 7.048MB 0.690u 0:00.690
+/tmp/magick-kPs0Swqy-00000004 PNG 3833x6800 3833x6800+0+0 8-bit DirectClass 7.347MB 0.630u 0:00.620
+/tmp/magick-kPs0Swqy-00000005 PNG 3833x6800 3833x6800+0+0 8-bit DirectClass 9.188MB 0.670u 0:00.679
+/tmp/magick-kPs0Swqy-00000006 PNG 6800x3833 6800x3833+0+0 8-bit DirectClass 8.363MB 0.700u 0:00.699
+/tmp/magick-kPs0Swqy-00000007 PNG 3833x6800 3833x6800+0+0 8-bit DirectClass 8.439MB 0.750u 0:00.759
+/tmp/magick-kPs0Swqy-00000008 PNG 3833x6800 3833x6800+0+0 8-bit DirectClass 8.422MB 0.690u 0:00.679
+/tmp/magick-kPs0Swqy-00000009 PNG 3833x6800 3833x6800+0+0 8-bit DirectClass 7.648MB 0.650u 0:00.660
+/tmp/magick-kPs0Swqy-00000010 PNG 3833x6800 3833x6800+0+0 8-bit DirectClass 8.396MB 0.730u 0:00.720
+/tmp/magick-kPs0Swqy-00000011 PNG 6800x3833 6800x3833+0+0 8-bit DirectClass 7.893MB 0.670u 0:00.660
+BANK_STATEMENT.PDF[0] PDF 3833x6800 3833x6800+0+0 16-bit DirectClass 7.766MB 6.860u 0:06.870
+BANK_STATEMENT.PDF[1] PDF 3833x6800 3833x6800+0+0 16-bit DirectClass 7.766MB 6.190u 0:06.190
+BANK_STATEMENT.PDF[2] PDF 3833x6800 3833x6800+0+0 16-bit DirectClass 7.766MB 5.500u 0:05.500
+BANK_STATEMENT.PDF[3] PDF 3833x6800 3833x6800+0+0 16-bit DirectClass 7.766MB 4.870u 0:04.879
+BANK_STATEMENT.PDF[4] PDF 3833x6800 3833x6800+0+0 16-bit DirectClass 7.766MB 4.200u 0:04.199
+BANK_STATEMENT.PDF[5] PDF 6800x3833 6800x3833+0+0 16-bit DirectClass 7.766MB 3.500u 0:03.500
+BANK_STATEMENT.PDF[6] PDF 3833x6800 3833x6800+0+0 16-bit DirectClass 7.766MB 2.740u 0:02.740
+BANK_STATEMENT.PDF[7] PDF 3833x6800 3833x6800+0+0 16-bit DirectClass 7.766MB 2.050u 0:02.060
+BANK_STATEMENT.PDF[8] PDF 3833x6800 3833x6800+0+0 16-bit DirectClass 7.766MB 1.400u 0:01.400
+BANK_STATEMENT.PDF[9] PDF 3833x6800 3833x6800+0+0 16-bit DirectClass 7.766MB 0.670u 0:00.679
+BANK_STATEMENT.PDF[10] PDF 6800x3833 6800x3833+0+0 16-bit DirectClass 7.766MB 0.000u 0:00.010
+BANK_STATEMENT.PDF=>BANK_STATEMENT_manual-00.jpg[0] PDF 3833x6800 3833x6800+0+0 16-bit Grayscale DirectClass 344KB 74.460u 0:27.289
+BANK_STATEMENT.PDF=>BANK_STATEMENT_manual-01.jpg[1] PDF 3833x6800 3833x6800+0+0 16-bit Grayscale DirectClass 229KB 74.630u 0:27.460
+BANK_STATEMENT.PDF=>BANK_STATEMENT_manual-02.jpg[2] PDF 3833x6800 3833x6800+0+0 16-bit Grayscale DirectClass 176KB 74.800u 0:27.629
+BANK_STATEMENT.PDF=>BANK_STATEMENT_manual-03.jpg[3] PDF 3833x6800 3833x6800+0+0 16-bit Grayscale DirectClass 287KB 74.980u 0:27.800
+BANK_STATEMENT.PDF=>BANK_STATEMENT_manual-04.jpg[4] PDF 3833x6800 3833x6800+0+0 16-bit Grayscale DirectClass 426KB 75.160u 0:27.980
+BANK_STATEMENT.PDF=>BANK_STATEMENT_manual-05.jpg[5] PDF 6800x3833 6800x3833+0+0 16-bit Grayscale DirectClass 250KB 75.330u 0:28.160
+BANK_STATEMENT.PDF=>BANK_STATEMENT_manual-06.jpg[6] PDF 3833x6800 3833x6800+0+0 16-bit Grayscale DirectClass 336KB 75.550u 0:28.370
+BANK_STATEMENT.PDF=>BANK_STATEMENT_manual-07.jpg[7] PDF 3833x6800 3833x6800+0+0 16-bit Grayscale DirectClass 324KB 75.750u 0:28.579
+BANK_STATEMENT.PDF=>BANK_STATEMENT_manual-08.jpg[8] PDF 3833x6800 3833x6800+0+0 16-bit Grayscale DirectClass 201KB 75.920u 0:28.750
+BANK_STATEMENT.PDF=>BANK_STATEMENT_manual-09.jpg[9] PDF 3833x6800 3833x6800+0+0 16-bit Grayscale DirectClass 307KB 76.100u 0:28.929
+BANK_STATEMENT.PDF=>BANK_STATEMENT_manual-10.jpg[10] PDF 6800x3833 6800x3833+0+0 16-bit Grayscale DirectClass 254KB 76.280u 0:29.109
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pnggray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150  -dBackgroundColor=16#ffffff -sOutputFile=BANK_STATEMENT-r150-pnggray-clzw-2-%02d.png BANK_STATEMENT.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pnggray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150  -dBackgroundColor=16#ffffff -sOutputFile=BANK_STATEMENT-r150-pnggray-clzw-2-%02d.png BANK_STATEMENT. 
+BANK_STATEMENT_converted-0.jpg             BANK_STATEMENT-r120-tgray-clzw-2-01.tiff   BANK_STATEMENT-r150-tgray-2-02.tiff
+BANK_STATEMENT_converted-10.jpg            BANK_STATEMENT-r120-tgray-clzw-2-02.tiff   BANK_STATEMENT-r150-tgray-2-03.tiff
+BANK_STATEMENT_converted-1.jpg             BANK_STATEMENT-r120-tgray-clzw-2-03.tiff   BANK_STATEMENT-r150-tgray-2-04.tiff
+BANK_STATEMENT_converted-2.jpg             BANK_STATEMENT-r120-tgray-clzw-2-04.tiff   BANK_STATEMENT-r150-tgray-2-05.tiff
+BANK_STATEMENT_converted-3.jpg             BANK_STATEMENT-r120-tgray-clzw-2-05.tiff   BANK_STATEMENT-r150-tgray-2-06.tiff
+BANK_STATEMENT_converted-4.jpg             BANK_STATEMENT-r120-tgray-clzw-2-06.tiff   BANK_STATEMENT-r150-tgray-2-07.tiff
+BANK_STATEMENT_converted-5.jpg             BANK_STATEMENT-r120-tgray-clzw-2-07.tiff   BANK_STATEMENT-r150-tgray-2-08.tiff
+BANK_STATEMENT_converted-6.jpg             BANK_STATEMENT-r120-tgray-clzw-2-08.tiff   BANK_STATEMENT-r150-tgray-2-09.tiff
+BANK_STATEMENT_converted-7.jpg             BANK_STATEMENT-r120-tgray-clzw-2-09.tiff   BANK_STATEMENT-r150-tgray-2-10.tiff
+BANK_STATEMENT_converted-8.jpg             BANK_STATEMENT-r120-tgray-clzw-2-10.tiff   BANK_STATEMENT-r150-tgray-2-11.tiff
+BANK_STATEMENT_converted-9.jpg             BANK_STATEMENT-r120-tgray-clzw-2-11.tiff   BANK_STATEMENT-r150-tgray-clzw-2-01.tiff
+BANK_STATEMENT_manual-00.jpg               BANK_STATEMENT-r150-pnggray-clzw-2-01.png  BANK_STATEMENT-r150-tgray-clzw-2-02.tiff
+BANK_STATEMENT_manual-01.jpg               BANK_STATEMENT-r150-pnggray-clzw-2-02.png  BANK_STATEMENT-r150-tgray-clzw-2-03.tiff
+BANK_STATEMENT_manual-02.jpg               BANK_STATEMENT-r150-pnggray-clzw-2-03.png  BANK_STATEMENT-r150-tgray-clzw-2-04.tiff
+BANK_STATEMENT_manual-03.jpg               BANK_STATEMENT-r150-pnggray-clzw-2-04.png  BANK_STATEMENT-r150-tgray-clzw-2-05.tiff
+BANK_STATEMENT_manual-04.jpg               BANK_STATEMENT-r150-pnggray-clzw-2-05.png  BANK_STATEMENT-r150-tgray-clzw-2-06.tiff
+BANK_STATEMENT_manual-05.jpg               BANK_STATEMENT-r150-pnggray-clzw-2-06.png  BANK_STATEMENT-r150-tgray-clzw-2-07.tiff
+BANK_STATEMENT_manual-06.jpg               BANK_STATEMENT-r150-pnggray-clzw-2-07.png  BANK_STATEMENT-r150-tgray-clzw-2-08.tiff
+BANK_STATEMENT_manual-07.jpg               BANK_STATEMENT-r150-pnggray-clzw-2-08.png  BANK_STATEMENT-r150-tgray-clzw-2-09.tiff
+BANK_STATEMENT_manual-08.jpg               BANK_STATEMENT-r150-pnggray-clzw-2-09.png  BANK_STATEMENT-r150-tgray-clzw-2-10.tiff
+BANK_STATEMENT_manual-09.jpg               BANK_STATEMENT-r150-pnggray-clzw-2-10.png  BANK_STATEMENT-r150-tgray-clzw-2-11.tiff
+BANK_STATEMENT_manual-10.jpg               BANK_STATEMENT-r150-pnggray-clzw-2-11.png  
+BANK_STATEMENT.PDF                         BANK_STATEMENT-r150-tgray-2-01.tiff        
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pnggray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150  -dBackgroundColor=16#ffffff -sOutputFile=BANK_STATEMENT-r150-pnggray-clzw-2-%02d.png BANK_STATEMENT 
+BANK_STATEMENT_converted-0.jpg             BANK_STATEMENT-r120-tgray-clzw-2-01.tiff   BANK_STATEMENT-r150-tgray-2-02.tiff
+BANK_STATEMENT_converted-10.jpg            BANK_STATEMENT-r120-tgray-clzw-2-02.tiff   BANK_STATEMENT-r150-tgray-2-03.tiff
+BANK_STATEMENT_converted-1.jpg             BANK_STATEMENT-r120-tgray-clzw-2-03.tiff   BANK_STATEMENT-r150-tgray-2-04.tiff
+BANK_STATEMENT_converted-2.jpg             BANK_STATEMENT-r120-tgray-clzw-2-04.tiff   BANK_STATEMENT-r150-tgray-2-05.tiff
+BANK_STATEMENT_converted-3.jpg             BANK_STATEMENT-r120-tgray-clzw-2-05.tiff   BANK_STATEMENT-r150-tgray-2-06.tiff
+BANK_STATEMENT_converted-4.jpg             BANK_STATEMENT-r120-tgray-clzw-2-06.tiff   BANK_STATEMENT-r150-tgray-2-07.tiff
+BANK_STATEMENT_converted-5.jpg             BANK_STATEMENT-r120-tgray-clzw-2-07.tiff   BANK_STATEMENT-r150-tgray-2-08.tiff
+BANK_STATEMENT_converted-6.jpg             BANK_STATEMENT-r120-tgray-clzw-2-08.tiff   BANK_STATEMENT-r150-tgray-2-09.tiff
+BANK_STATEMENT_converted-7.jpg             BANK_STATEMENT-r120-tgray-clzw-2-09.tiff   BANK_STATEMENT-r150-tgray-2-10.tiff
+BANK_STATEMENT_converted-8.jpg             BANK_STATEMENT-r120-tgray-clzw-2-10.tiff   BANK_STATEMENT-r150-tgray-2-11.tiff
+BANK_STATEMENT_converted-9.jpg             BANK_STATEMENT-r120-tgray-clzw-2-11.tiff   BANK_STATEMENT-r150-tgray-clzw-2-01.tiff
+BANK_STATEMENT_manual-00.jpg               BANK_STATEMENT-r150-pnggray-clzw-2-01.png  BANK_STATEMENT-r150-tgray-clzw-2-02.tiff
+BANK_STATEMENT_manual-01.jpg               BANK_STATEMENT-r150-pnggray-clzw-2-02.png  BANK_STATEMENT-r150-tgray-clzw-2-03.tiff
+BANK_STATEMENT_manual-02.jpg               BANK_STATEMENT-r150-pnggray-clzw-2-03.png  BANK_STATEMENT-r150-tgray-clzw-2-04.tiff
+BANK_STATEMENT_manual-03.jpg               BANK_STATEMENT-r150-pnggray-clzw-2-04.png  BANK_STATEMENT-r150-tgray-clzw-2-05.tiff
+BANK_STATEMENT_manual-04.jpg               BANK_STATEMENT-r150-pnggray-clzw-2-05.png  BANK_STATEMENT-r150-tgray-clzw-2-06.tiff
+BANK_STATEMENT_manual-05.jpg               BANK_STATEMENT-r150-pnggray-clzw-2-06.png  BANK_STATEMENT-r150-tgray-clzw-2-07.tiff
+BANK_STATEMENT_manual-06.jpg               BANK_STATEMENT-r150-pnggray-clzw-2-07.png  BANK_STATEMENT-r150-tgray-clzw-2-08.tiff
+BANK_STATEMENT_manual-07.jpg               BANK_STATEMENT-r150-pnggray-clzw-2-08.png  BANK_STATEMENT-r150-tgray-clzw-2-09.tiff
+BANK_STATEMENT_manual-08.jpg               BANK_STATEMENT-r150-pnggray-clzw-2-09.png  BANK_STATEMENT-r150-tgray-clzw-2-10.tiff
+BANK_STATEMENT_manual-09.jpg               BANK_STATEMENT-r150-pnggray-clzw-2-10.png  BANK_STATEMENT-r150-tgray-clzw-2-11.tiff
+BANK_STATEMENT_manual-10.jpg               BANK_STATEMENT-r150-pnggray-clzw-2-11.png  
+BANK_STATEMENT.PDF                         BANK_STATEMENT-r150-tgray-2-01.tiff        
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffgray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150 -sCompression=lzw -dBackgroundColor=16#ffffff -sOutputFile=BANK_STATEMENT-r150-tiffgray-clzw-2-%02d.tiff BANK_STATEMENT-r150-pnggray-clzw-2-01.png 
+Error: /syntaxerror in (binary token, type=137)
+Operand stack:
+
+Execution stack:
+   %interp_exit   .runexec2   --nostringval--   --nostringval--   --nostringval--   2   %stopped_push   --nostringval--   --nostringval--   --nostringval--   false   1   %stopped_push   1916   1   3   %oparray_pop   1915   1   3   %oparray_pop   1899   1   3   %oparray_pop   1787   1   3   %oparray_pop   --nostringval--   %errorexec_pop   .runexec2   --nostringval--   --nostringval--   --nostringval--   2   %stopped_push
+Dictionary stack:
+   --dict:1180/1684(ro)(G)--   --dict:0/20(G)--   --dict:77/200(L)--
+Current allocation mode is local
+GPL Ghostscript 9.10: Unrecoverable error, exit code 1
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ convert BANK_STATEMENT-r150-pnggray-clzw-2-01.png BANK_STATEMENT-r150-tiffgray-clzw-2-01-pngto.tiff
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ cd ../../
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ vim imageprops.rb 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ ruby imageprops.rb 
+   Format: PDF
+   Geometry: 1840x3264
+   Class: DirectClass
+   Depth: 8 bits-per-pixel
+   Colors: 15401
+   Filesize: 6221443
+   Resolution: 72x72 pixels/centimeter
+   Properties:
+      date:create = "2017-12-04T18:43:45+05:00"
+      date:modify = "2017-12-04T18:43:45+05:00"
+      pdf:HiResBoundingBox = "1840x3264+0+0"
+      pdf:Version = "PDF-1.4 "
+   Format: PDF
+   Geometry: 1840x3264
+   Class: DirectClass
+   Depth: 8 bits-per-pixel
+   Colors: 10141
+   Filesize: 6221443
+   Resolution: 72x72 pixels/centimeter
+   Properties:
+      date:create = "2017-12-04T18:43:45+05:00"
+      date:modify = "2017-12-04T18:43:45+05:00"
+      pdf:HiResBoundingBox = "1840x3264+0+0"
+      pdf:Version = "PDF-1.4 "
+   Format: PDF
+   Geometry: 1840x3264
+   Class: DirectClass
+   Depth: 8 bits-per-pixel
+   Colors: 6547
+   Filesize: 6221443
+   Resolution: 72x72 pixels/centimeter
+   Properties:
+      date:create = "2017-12-04T18:43:45+05:00"
+      date:modify = "2017-12-04T18:43:45+05:00"
+      pdf:HiResBoundingBox = "1840x3264+0+0"
+      pdf:Version = "PDF-1.4 "
+   Format: PDF
+   Geometry: 1840x3264
+   Class: DirectClass
+   Depth: 8 bits-per-pixel
+   Colors: 14166
+   Filesize: 6221443
+   Resolution: 72x72 pixels/centimeter
+   Properties:
+      date:create = "2017-12-04T18:43:45+05:00"
+      date:modify = "2017-12-04T18:43:45+05:00"
+      pdf:HiResBoundingBox = "1840x3264+0+0"
+      pdf:Version = "PDF-1.4 "
+   Format: PDF
+   Geometry: 1840x3264
+   Class: DirectClass
+   Depth: 8 bits-per-pixel
+   Colors: 36431
+   Filesize: 6221443
+   Resolution: 72x72 pixels/centimeter
+   Properties:
+      date:create = "2017-12-04T18:43:45+05:00"
+      date:modify = "2017-12-04T18:43:45+05:00"
+      pdf:HiResBoundingBox = "1840x3264+0+0"
+      pdf:Version = "PDF-1.4 "
+   Format: PDF
+   Geometry: 3264x1840
+   Class: DirectClass
+   Depth: 8 bits-per-pixel
+   Colors: 23015
+   Filesize: 6221443
+   Resolution: 72x72 pixels/centimeter
+   Properties:
+      date:create = "2017-12-04T18:43:45+05:00"
+      date:modify = "2017-12-04T18:43:45+05:00"
+      pdf:HiResBoundingBox = "1840x3264+0+0"
+      pdf:Version = "PDF-1.4 "
+   Format: PDF
+   Geometry: 1840x3264
+   Class: DirectClass
+   Depth: 8 bits-per-pixel
+   Colors: 22219
+   Filesize: 6221443
+   Resolution: 72x72 pixels/centimeter
+   Properties:
+      date:create = "2017-12-04T18:43:45+05:00"
+      date:modify = "2017-12-04T18:43:45+05:00"
+      pdf:HiResBoundingBox = "1840x3264+0+0"
+      pdf:Version = "PDF-1.4 "
+   Format: PDF
+   Geometry: 1840x3264
+   Class: DirectClass
+   Depth: 8 bits-per-pixel
+   Colors: 24054
+   Filesize: 6221443
+   Resolution: 72x72 pixels/centimeter
+   Properties:
+      date:create = "2017-12-04T18:43:45+05:00"
+      date:modify = "2017-12-04T18:43:45+05:00"
+      pdf:HiResBoundingBox = "1840x3264+0+0"
+      pdf:Version = "PDF-1.4 "
+   Format: PDF
+   Geometry: 1840x3264
+   Class: DirectClass
+   Depth: 8 bits-per-pixel
+   Colors: 21746
+   Filesize: 6221443
+   Resolution: 72x72 pixels/centimeter
+   Properties:
+      date:create = "2017-12-04T18:43:45+05:00"
+      date:modify = "2017-12-04T18:43:45+05:00"
+      pdf:HiResBoundingBox = "1840x3264+0+0"
+      pdf:Version = "PDF-1.4 "
+   Format: PDF
+   Geometry: 1840x3264
+   Class: DirectClass
+   Depth: 8 bits-per-pixel
+   Colors: 25942
+   Filesize: 6221443
+   Resolution: 72x72 pixels/centimeter
+   Properties:
+      date:create = "2017-12-04T18:43:45+05:00"
+      date:modify = "2017-12-04T18:43:45+05:00"
+      pdf:HiResBoundingBox = "1840x3264+0+0"
+      pdf:Version = "PDF-1.4 "
+   Format: PDF
+   Geometry: 3264x1840
+   Class: DirectClass
+   Depth: 8 bits-per-pixel
+   Colors: 21284
+   Filesize: 6221443
+   Resolution: 72x72 pixels/centimeter
+   Properties:
+      date:create = "2017-12-04T18:43:45+05:00"
+      date:modify = "2017-12-04T18:43:45+05:00"
+      pdf:HiResBoundingBox = "1840x3264+0+0"
+      pdf:Version = "PDF-1.4 "
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ vim imageprops.rb 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ ruby imageprops.rb 
+   Format: PDF
+   Geometry: 595x842
+   Class: DirectClass
+   Depth: 8 bits-per-pixel
+   Colors: 852
+   Filesize: 121687
+   Resolution: 72x72 pixels/centimeter
+   Properties:
+      date:create = "2017-12-04T18:45:18+05:00"
+      date:modify = "2017-12-04T18:45:18+05:00"
+      pdf:HiResBoundingBox = "595.276x841.89+0+0"
+      pdf:Version = "PDF-1.6 "
+   Format: PDF
+   Geometry: 595x842
+   Class: DirectClass
+   Depth: 8 bits-per-pixel
+   Colors: 528
+   Filesize: 121687
+   Resolution: 72x72 pixels/centimeter
+   Properties:
+      date:create = "2017-12-04T18:45:18+05:00"
+      date:modify = "2017-12-04T18:45:18+05:00"
+      pdf:HiResBoundingBox = "595.276x841.89+0+0"
+      pdf:Version = "PDF-1.6 "
+   Format: PDF
+   Geometry: 595x842
+   Class: DirectClass
+   Depth: 8 bits-per-pixel
+   Colors: 319
+   Filesize: 121687
+   Resolution: 72x72 pixels/centimeter
+   Properties:
+      date:create = "2017-12-04T18:45:18+05:00"
+      date:modify = "2017-12-04T18:45:18+05:00"
+      pdf:HiResBoundingBox = "595.276x841.89+0+0"
+      pdf:Version = "PDF-1.6 "
+   Format: PDF
+   Geometry: 595x842
+   Class: DirectClass
+   Depth: 8 bits-per-pixel
+   Colors: 166
+   Filesize: 121687
+   Resolution: 72x72 pixels/centimeter
+   Properties:
+      date:create = "2017-12-04T18:45:18+05:00"
+      date:modify = "2017-12-04T18:45:18+05:00"
+      pdf:HiResBoundingBox = "595.276x841.89+0+0"
+      pdf:Version = "PDF-1.6 "
+   Format: PDF
+   Geometry: 595x842
+   Class: DirectClass
+   Depth: 8 bits-per-pixel
+   Colors: 604
+   Filesize: 121687
+   Resolution: 72x72 pixels/centimeter
+   Properties:
+      date:create = "2017-12-04T18:45:18+05:00"
+      date:modify = "2017-12-04T18:45:18+05:00"
+      pdf:HiResBoundingBox = "595.276x841.89+0+0"
+      pdf:Version = "PDF-1.6 "
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ grep -c -i "/image" test/pdf2/BANK_STATEMENT.pdf 
+BANK_STATEMENT_converted-0.jpg  BANK_STATEMENT_converted-3.jpg  BANK_STATEMENT_converted-6.jpg  
+BANK_STATEMENT_converted-1.jpg  BANK_STATEMENT_converted-4.jpg  BANK_STATEMENT_converted-7.jpg  
+BANK_STATEMENT_converted-2.jpg  BANK_STATEMENT_converted-5.jpg  BANK_STATEMENT.PDF              
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ grep -c -i "/image" test/pdf2/BANK_STATEMENT.PDF 
+13
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffgray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r120 -sCompression=lzw -sPAPERSIZE=a4 -dFitPage -dBackgroundColor=16#ffffff -sOutputFile=BANK_STATEMENT-r120-tgray-clzw-2-a4-%02d.tiff BANK_STATEMENT.PDF 
+Error: /undefinedfilename in (BANK_STATEMENT.PDF)
+Operand stack:
+
+Execution stack:
+   %interp_exit   .runexec2   --nostringval--   --nostringval--   --nostringval--   2   %stopped_push   --nostringval--   --nostringval--   --nostringval--   false   1   %stopped_push
+Dictionary stack:
+   --dict:1184/1684(ro)(G)--   --dict:0/20(G)--   --dict:77/200(L)--
+Current allocation mode is local
+Last OS error: No such file or directory
+GPL Ghostscript 9.10: Unrecoverable error, exit code 1
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffgray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r120 -sCompression=lzw -sPAPERSIZE=a4 -dFitPage -dBackgroundColor=16#ffffff -sOutputFile=BANK_STATEMENT-r120-tgray-clzw-2-a4-%02d.tiff BANK_^CATEMENT.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples$ cd test/pdf1/
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffgray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r120 -sCompression=lzw -sPAPERSIZE=a4 -dFitPage -dBackgroundColor=16#ffffff -sOutputFile=BANK_STATEMENT-r120-tgray-clzw-2-a4-%02d.tiff BANK_STATEMENT.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffgray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r120 -sCompression=lzw -sPAPERSIZE=a4 -dBackgroundColor=16#ffffff -sOutputFile=BANK_STATEMENT-r120-tgray-clzw-3-a4-%02d.tiff BANK_STATEMENT.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffgray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r120 -dCompatibilityLevel=1.4 -sCompression=lzw -sPAPERSIZE=a4 -dFitPage -dBackgroundColor=16#ffffff -sOutputFile=BANK_STATEMENT-r120-tgray-clzw-4-a4-%02d.tiff BANK_STATEMENT.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ ^V
+
+
+: command not found
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ vim ../../main1.rb 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pnggray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r120 -dCompatibilityLevel=1.4 -sCompression=lzw -sPAPERSIZE=a4 -dFitPage -dBackgroundColor=16#ffffff -sOutputFile=BANK_STATEMENT-tmp-%02d.png BANK_STATEMENT.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ convert -density 150 BANK_STATEMENT-tmp-*.png -quality 30 BANK_STATEMENT-tmp-%02d.jpg
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ convert -verbose -density 150 BANK_STATEMENT-tmp-*.png -quality 30 BANK_STATEMENT-tmp-%02d.jpg
+BANK_STATEMENT-tmp-01.png PNG 992x1403 992x1403+0+0 8-bit PseudoClass 256c 578KB 0.070u 0:00.039
+BANK_STATEMENT-tmp-02.png PNG 992x1403 992x1403+0+0 8-bit PseudoClass 256c 548KB 0.060u 0:00.019
+BANK_STATEMENT-tmp-03.png PNG 992x1403 992x1403+0+0 8-bit PseudoClass 256c 529KB 0.060u 0:00.020
+BANK_STATEMENT-tmp-04.png PNG 992x1403 992x1403+0+0 8-bit PseudoClass 256c 558KB 0.060u 0:00.029
+BANK_STATEMENT-tmp-05.png PNG 992x1403 992x1403+0+0 8-bit PseudoClass 256c 634KB 0.060u 0:00.030
+BANK_STATEMENT-tmp-06.png PNG 1403x992 1403x992+0+0 8-bit PseudoClass 256c 555KB 0.090u 0:00.019
+BANK_STATEMENT-tmp-07.png PNG 992x1403 992x1403+0+0 8-bit PseudoClass 256c 600KB 0.060u 0:00.030
+BANK_STATEMENT-tmp-08.png PNG 992x1403 992x1403+0+0 8-bit PseudoClass 256c 595KB 0.070u 0:00.029
+BANK_STATEMENT-tmp-09.png PNG 992x1403 992x1403+0+0 8-bit PseudoClass 256c 538KB 0.100u 0:00.030
+BANK_STATEMENT-tmp-10.png PNG 992x1403 992x1403+0+0 8-bit PseudoClass 256c 586KB 0.100u 0:00.039
+BANK_STATEMENT-tmp-11.png PNG 1403x992 1403x992+0+0 8-bit PseudoClass 256c 538KB 0.070u 0:00.030
+BANK_STATEMENT-tmp-01.png=>BANK_STATEMENT-tmp-00.jpg[0] PNG 992x1403 992x1403+0+0 8-bit Grayscale PseudoClass 256c 32.8KB 0.800u 0:00.300
+BANK_STATEMENT-tmp-02.png=>BANK_STATEMENT-tmp-01.jpg[1] PNG 992x1403 992x1403+0+0 8-bit Grayscale PseudoClass 256c 16.4KB 0.760u 0:00.300
+BANK_STATEMENT-tmp-03.png=>BANK_STATEMENT-tmp-02.jpg[2] PNG 992x1403 992x1403+0+0 8-bit Grayscale PseudoClass 256c 12.3KB 0.720u 0:00.299
+BANK_STATEMENT-tmp-04.png=>BANK_STATEMENT-tmp-03.jpg[3] PNG 992x1403 992x1403+0+0 8-bit Grayscale PseudoClass 256c 24.6KB 0.670u 0:00.280
+BANK_STATEMENT-tmp-05.png=>BANK_STATEMENT-tmp-04.jpg[4] PNG 992x1403 992x1403+0+0 8-bit Grayscale PseudoClass 256c 36.9KB 0.630u 0:00.269
+BANK_STATEMENT-tmp-06.png=>BANK_STATEMENT-tmp-05.jpg[5] PNG 1403x992 1403x992+0+0 8-bit Grayscale PseudoClass 256c 24.6KB 0.550u 0:00.260
+BANK_STATEMENT-tmp-07.png=>BANK_STATEMENT-tmp-06.jpg[6] PNG 992x1403 992x1403+0+0 8-bit Grayscale PseudoClass 256c 28.7KB 0.520u 0:00.250
+BANK_STATEMENT-tmp-08.png=>BANK_STATEMENT-tmp-07.jpg[7] PNG 992x1403 992x1403+0+0 8-bit Grayscale PseudoClass 256c 28.7KB 0.450u 0:00.240
+BANK_STATEMENT-tmp-09.png=>BANK_STATEMENT-tmp-08.jpg[8] PNG 992x1403 992x1403+0+0 8-bit Grayscale PseudoClass 256c 20.5KB 0.360u 0:00.219
+BANK_STATEMENT-tmp-10.png=>BANK_STATEMENT-tmp-09.jpg[9] PNG 992x1403 992x1403+0+0 8-bit Grayscale PseudoClass 256c 24.6KB 0.280u 0:00.190
+BANK_STATEMENT-tmp-11.png=>BANK_STATEMENT-tmp-10.jpg[10] PNG 1403x992 1403x992+0+0 8-bit Grayscale PseudoClass 256c 20.5KB 0.230u 0:00.179
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pnggray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150 -dCompatibilityLevel=1.4 -sCompression=lzw -sPAPERSIZE=a4 -dFitPage -dBackgroundColor=16#ffffff -sOutputFile=BANK_STATEMENT-150-tmp-%02d.png BANK_STATEMENT.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ convert -verbose -density 150 BANK_STATEMENT-150-tmp-*.png -quality 30 BANK_STATEMENT-150-tmp-%02d.jpg
+BANK_STATEMENT-150-tmp-01.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 876KB 0.100u 0:00.050
+BANK_STATEMENT-150-tmp-02.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 832KB 0.100u 0:00.039
+BANK_STATEMENT-150-tmp-03.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 802KB 0.110u 0:00.050
+BANK_STATEMENT-150-tmp-04.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 847KB 0.070u 0:00.039
+BANK_STATEMENT-150-tmp-05.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 959KB 0.150u 0:00.050
+BANK_STATEMENT-150-tmp-06.png PNG 1754x1240 1754x1240+0+0 8-bit PseudoClass 256c 847KB 0.090u 0:00.039
+BANK_STATEMENT-150-tmp-07.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 907KB 0.120u 0:00.050
+BANK_STATEMENT-150-tmp-08.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 902KB 0.110u 0:00.050
+BANK_STATEMENT-150-tmp-09.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 813KB 0.120u 0:00.050
+BANK_STATEMENT-150-tmp-10.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 887KB 0.100u 0:00.049
+BANK_STATEMENT-150-tmp-11.png PNG 1754x1240 1754x1240+0+0 8-bit PseudoClass 256c 822KB 0.110u 0:00.050
+BANK_STATEMENT-150-tmp-01.png=>BANK_STATEMENT-150-tmp-00.jpg[0] PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 53.2KB 1.160u 0:00.489
+BANK_STATEMENT-150-tmp-02.png=>BANK_STATEMENT-150-tmp-01.jpg[1] PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 28.7KB 1.090u 0:00.480
+BANK_STATEMENT-150-tmp-03.png=>BANK_STATEMENT-150-tmp-02.jpg[2] PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 20.5KB 1.000u 0:00.449
+BANK_STATEMENT-150-tmp-04.png=>BANK_STATEMENT-150-tmp-03.jpg[3] PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 36.9KB 0.930u 0:00.440
+BANK_STATEMENT-150-tmp-05.png=>BANK_STATEMENT-150-tmp-04.jpg[4] PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 57.3KB 0.800u 0:00.410
+BANK_STATEMENT-150-tmp-06.png=>BANK_STATEMENT-150-tmp-05.jpg[5] PNG 1754x1240 1754x1240+0+0 8-bit Grayscale PseudoClass 256c 36.9KB 0.730u 0:00.400
+BANK_STATEMENT-150-tmp-07.png=>BANK_STATEMENT-150-tmp-06.jpg[6] PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 45.1KB 0.630u 0:00.370
+BANK_STATEMENT-150-tmp-08.png=>BANK_STATEMENT-150-tmp-07.jpg[7] PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 45.1KB 0.530u 0:00.329
+BANK_STATEMENT-150-tmp-09.png=>BANK_STATEMENT-150-tmp-08.jpg[8] PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 28.7KB 0.430u 0:00.299
+BANK_STATEMENT-150-tmp-10.png=>BANK_STATEMENT-150-tmp-09.jpg[9] PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 41KB 0.340u 0:00.269
+BANK_STATEMENT-150-tmp-11.png=>BANK_STATEMENT-150-tmp-10.jpg[10] PNG 1754x1240 1754x1240+0+0 8-bit Grayscale PseudoClass 256c 28.7KB 0.250u 0:00.230
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ convert -verbose -density 150 BANK_STATEMENT-150-tmp-*.png -quality 80 BANK_STATEMENT-150-80-tmp-%02d.jpg
+BANK_STATEMENT-150-tmp-01.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 876KB 0.090u 0:00.059
+BANK_STATEMENT-150-tmp-02.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 832KB 0.080u 0:00.030
+BANK_STATEMENT-150-tmp-03.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 802KB 0.080u 0:00.030
+BANK_STATEMENT-150-tmp-04.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 847KB 0.100u 0:00.039
+BANK_STATEMENT-150-tmp-05.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 959KB 0.070u 0:00.030
+BANK_STATEMENT-150-tmp-06.png PNG 1754x1240 1754x1240+0+0 8-bit PseudoClass 256c 847KB 0.070u 0:00.029
+BANK_STATEMENT-150-tmp-07.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 907KB 0.090u 0:00.030
+BANK_STATEMENT-150-tmp-08.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 902KB 0.120u 0:00.050
+BANK_STATEMENT-150-tmp-09.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 813KB 0.050u 0:00.029
+BANK_STATEMENT-150-tmp-10.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 887KB 0.100u 0:00.030
+BANK_STATEMENT-150-tmp-11.png PNG 1754x1240 1754x1240+0+0 8-bit PseudoClass 256c 822KB 0.150u 0:00.059
+BANK_STATEMENT-150-tmp-01.png=>BANK_STATEMENT-150-80-tmp-00.jpg[0] PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 164KB 0.940u 0:00.380
+BANK_STATEMENT-150-tmp-02.png=>BANK_STATEMENT-150-80-tmp-01.jpg[1] PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 119KB 0.880u 0:00.370
+BANK_STATEMENT-150-tmp-03.png=>BANK_STATEMENT-150-80-tmp-02.jpg[2] PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 98.3KB 0.820u 0:00.359
+BANK_STATEMENT-150-tmp-04.png=>BANK_STATEMENT-150-80-tmp-03.jpg[3] PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 135KB 0.740u 0:00.339
+BANK_STATEMENT-150-tmp-05.png=>BANK_STATEMENT-150-80-tmp-04.jpg[4] PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 205KB 0.690u 0:00.329
+BANK_STATEMENT-150-tmp-06.png=>BANK_STATEMENT-150-80-tmp-05.jpg[5] PNG 1754x1240 1754x1240+0+0 8-bit Grayscale PseudoClass 256c 147KB 0.640u 0:00.320
+BANK_STATEMENT-150-tmp-07.png=>BANK_STATEMENT-150-80-tmp-06.jpg[6] PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 168KB 0.570u 0:00.309
+BANK_STATEMENT-150-tmp-08.png=>BANK_STATEMENT-150-80-tmp-07.jpg[7] PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 168KB 0.470u 0:00.279
+BANK_STATEMENT-150-tmp-09.png=>BANK_STATEMENT-150-80-tmp-08.jpg[8] PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 123KB 0.440u 0:00.269
+BANK_STATEMENT-150-tmp-10.png=>BANK_STATEMENT-150-80-tmp-09.jpg[9] PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 160KB 0.360u 0:00.260
+BANK_STATEMENT-150-tmp-11.png=>BANK_STATEMENT-150-80-tmp-10.jpg[10] PNG 1754x1240 1754x1240+0+0 8-bit Grayscale PseudoClass 256c 131KB 0.230u 0:00.220
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pnggray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150 -dCompatibilityLevel=1.4 -sCompression=lzw -sPAPERSIZE=a4 -dFitPage -dBackgroundColor=16#ffffff -sOutputFile=BANK_STATEMENT-150-tmp-%02d.png BANK_STATEMENT.PDF ^C
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ convert -verbose -density 150 BANK_STATEMENT-150-tmp-*.png -quality 80 BANK_STATEMENT-150-80-tmp-%02d.jpg^C
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pnggray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150  -sCompression=lzw -sPAPERSIZE=a4 -dFitPage -dBackgroundColor=16#ffffff -sOutputFile=APPLICATION_PDF-150-tmp-%02d.png APPLICATION_PDF.pdf 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ convert -verbose -density 150 APPLICATION_PDF-150-tmp-*.png -quality 80 APPLICATION_PDF-150-80-tmp-%02d.jpg
+APPLICATION_PDF-150-tmp-01.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 144KB 0.070u 0:00.040
+APPLICATION_PDF-150-tmp-02.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 159KB 0.100u 0:00.039
+APPLICATION_PDF-150-tmp-03.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 193KB 0.080u 0:00.030
+APPLICATION_PDF-150-tmp-04.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 189KB 0.090u 0:00.039
+APPLICATION_PDF-150-tmp-05.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 64KB 0.080u 0:00.019
+APPLICATION_PDF-150-tmp-01.png=>APPLICATION_PDF-150-80-tmp-00.jpg[0] PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 328KB 0.410u 0:00.169
+APPLICATION_PDF-150-tmp-02.png=>APPLICATION_PDF-150-80-tmp-01.jpg[1] PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 414KB 0.340u 0:00.160
+APPLICATION_PDF-150-tmp-03.png=>APPLICATION_PDF-150-80-tmp-02.jpg[2] PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 635KB 0.290u 0:00.160
+APPLICATION_PDF-150-tmp-04.png=>APPLICATION_PDF-150-80-tmp-03.jpg[3] PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 631KB 0.230u 0:00.149
+APPLICATION_PDF-150-tmp-05.png=>APPLICATION_PDF-150-80-tmp-04.jpg[4] PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 176KB 0.170u 0:00.149
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pnggray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150  -sCompression=lzw -sPAPERSIZE=a4 -dFitPage -dBackgroundColor=16#ffffff -sOutputFile=APPLICATION_PDF-150-tmp-%02d.png AADHAAR.pdf 
+AADHAAR_converted.jpg            AADHAAR_manual3.png              AADHAAR_manual5_r120_tg4.tiff    AADHAAR_manual.png
+AADHAAR_manual1.png              AADHAAR_manual3_r150_tgray.tiff  AADHAAR_manual6_r120_tlzw.tiff   AADHAAR_manual_r150_tg4.tiff
+AADHAAR_manual2.png              AADHAAR_manual4_r120_tgray.tiff  AADHAAR_manual.jpg               AADHAAR.PDF
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffgray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150  -sCompression=lzw -dBackgroundColor=16#ffffff -sOutputFile=AADHAAR-r150-tgray-clzw.tiff AADHAAR.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=tiffgray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r120  -sCompression=lzw -dBackgroundColor=16#ffffff -sOutputFile=AADHAAR-r120-tgray-clzw.tiff AADHAAR.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pnggray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150  -sCompression=lzw -dBackgroundColor=16#ffffff -sOutputFile=AADHAAR-r150-pgray-clzw.png AADHAAR.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ convert -verbose -density 150 AADHAAR-r150-pgray-clzw.png -quality 80 AADHAAR-conv-pngto.jpg
+AADHAAR-r150-pgray-clzw.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 166KB 0.080u 0:00.040
+AADHAAR-r150-pgray-clzw.png=>AADHAAR-conv-pngto.jpg PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 238KB 0.040u 0:00.019
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ convert -verbose -density 150 AADHAAR-r150-pgray-clzw.png -quality 30  AADHAAR-conv-pngto.jpg
+AADHAAR-r150-pgray-clzw.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 166KB 0.080u 0:00.039
+AADHAAR-r150-pgray-clzw.png=>AADHAAR-conv-pngto.jpg PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 127KB 0.070u 0:00.030
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ convert -verbose -density 150 AADHAAR-r150-pgray-clzw.png -quality 20  AADHAAR-conv-pngto.jpg
+AADHAAR-r150-pgray-clzw.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 166KB 0.090u 0:00.039
+AADHAAR-r150-pgray-clzw.png=>AADHAAR-conv-pngto.jpg PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 102KB 0.040u 0:00.019
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ convert -verbose -density 150 AADHAAR-r150-pgray-clzw.png -quality 10  AADHAAR-conv-pngto.jpg
+AADHAAR-r150-pgray-clzw.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 166KB 0.040u 0:00.019
+AADHAAR-r150-pgray-clzw.png=>AADHAAR-conv-pngto.jpg PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 69.6KB 0.050u 0:00.019
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ gs -q -dQUIET -dSAFER -dBATCH -dNOPAUSE -dNOPROMPT -dMaxBitmap=500000000 -dAlignToPixels=0 -dGridFitTT=2 -sDEVICE=pnggray -dTextAlphaBits=4 -dGraphicsAlphaBits=4 -r150  -sCompression=lzw -sPAPERSIZE=a4 -dFitPage -dBackgroundColor=16#ffffff -sOutputFile=AADHAAR-r150-pgray-clzw-a4.png AADHAAR.PDF 
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ convert -verbose -density 150 AADHAAR-r150-pgray-clzw-a4.png -quality 10  AADHAAR-conv-a4-pngto.jpg
+AADHAAR-r150-pgray-clzw-a4.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 166KB 0.120u 0:00.050
+AADHAAR-r150-pgray-clzw-a4.png=>AADHAAR-conv-a4-pngto.jpg PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 69.6KB 0.040u 0:00.019
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ convert -verbose -density 120 AADHAAR-r150-pgray-clzw-a4.png -quality 10  AADHAAR-conv-a4-pngto.jpg
+AADHAAR-r150-pgray-clzw-a4.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 166KB 0.080u 0:00.039
+AADHAAR-r150-pgray-clzw-a4.png=>AADHAAR-conv-a4-pngto.jpg PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 69.6KB 0.050u 0:00.019
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ convert -verbose -density 120 AADHAAR-r150-pgray-clzw-a4.png -quality 5  AADHAAR-conv-a4-pngto.jpg
+AADHAAR-r150-pgray-clzw-a4.png PNG 1240x1754 1240x1754+0+0 8-bit PseudoClass 256c 166KB 0.070u 0:00.029
+AADHAAR-r150-pgray-clzw-a4.png=>AADHAAR-conv-a4-pngto.jpg PNG 1240x1754 1240x1754+0+0 8-bit Grayscale PseudoClass 256c 49.2KB 0.060u 0:00.020
+indranilm@BBLPT0828:~/github/indranil32/rmagic-samples/test/pdf1$ 
+
